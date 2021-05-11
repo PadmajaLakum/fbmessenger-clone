@@ -4,6 +4,9 @@ import './Message.css';
 
 const  Message = forwardRef(({message,username},ref) => {
     const isUser = username === message.username;
+    
+    //displaying messages with different background colors,blue if username matches with prompted username  and  grey,if it does not match with username
+    
     return (
         <div ref={ref} className={`message ${isUser && 'message__user'}`}>
             <Card className={isUser? 'message__userCard' : 'message__guestCard'}>
