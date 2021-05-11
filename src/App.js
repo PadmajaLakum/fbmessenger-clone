@@ -12,6 +12,9 @@ function App() {
   const [input,setInput]=useState('');
   const [messages,setMessages]=useState([{username:'Padma',message:'Heyy'}, {username:'Indu',message:'Whats up'}]);
   const [username,setUsername]=useState('');
+  
+  //getting data from firebase using onSnapshot function
+  
   useEffect(() => {
     db.collection('messages')
     .orderBy('timestamp','desc')
@@ -22,6 +25,8 @@ function App() {
   useEffect(() => {
     setUsername(prompt('Please enter your name'))
   },[]);
+  
+  //setting up timestamp for the messages  so that latest message shows up on top
   
   const sendMessage = (event) => {
     event.preventDefault();
