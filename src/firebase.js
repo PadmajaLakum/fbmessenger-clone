@@ -1,7 +1,8 @@
 import firebase from 'firebase';
 
+//initializing firebase database 
+
 const firebaseApp=firebase.initializeApp({
-    
         apiKey: "AIzaSyCKKerALX0E7NJwCqo3fw8YMBThOrCU4hE",
         authDomain: "fbmessenger-clone-7f698.firebaseapp.com",
         databaseURL: "https://fbmessenger-clone-7f698-default-rtdb.firebaseio.com",
